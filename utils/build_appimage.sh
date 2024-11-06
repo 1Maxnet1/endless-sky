@@ -32,10 +32,10 @@ mv ./appimagetool* appimagetool && chmod +x appimagetool
 chmod -R 755 ./squashfs-root
 
 if [ ! -z "$OUTPUT" ] ; then
-  VERSION=000 ./appimagetool ./squashfs-root
+  VERSION=000 ./appimagetool --no-appstream ./squashfs-root
   mv ./Endless_Sky-000-x86_64.AppImage $OUTPUT
 else
-  ./appimagetool ./squashfs-root
+  ./appimagetool --no-appstream ./squashfs-root
 fi
 
 # Clean up
